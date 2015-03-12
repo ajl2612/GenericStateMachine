@@ -6,6 +6,7 @@
  */
 
 #include "Event.h"
+#include <stdio.h>
 
 Event::Event(char key) {
 	this->eventKey = key;
@@ -17,7 +18,9 @@ Event::Event(char key, int subGraph) {
 	this->subGraphID = subGraph;
 }
 
-Event::~Event() {}
+Event::~Event() {
+	printf("Deleting Event\n");
+}
 
 int Event::getSubGraphID(){
 	return this->subGraphID;

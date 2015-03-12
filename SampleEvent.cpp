@@ -14,5 +14,5 @@ SampleEvent::SampleEvent(char key, int subGraph) : Event(key, subGraph){}
 SampleEvent::~SampleEvent() {}
 
 char SampleEvent::getKey(){
-	return SAMPLE_EVENT;
+	return SAMPLE_EVENT_KEY;
 }

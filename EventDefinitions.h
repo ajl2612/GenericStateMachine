@@ -8,7 +8,7 @@
 #ifndef GM_EVENTDEFINITIONS_H_
 #define GM_EVENTDEFINITIONS_H_
 
-#define SAMPLE_EVENT 's'
+#define SAMPLE_EVENT_KEY 's'
 
 
 #endif /* GM_EVENTDEFINITIONS_H_ */
