@@ -6,22 +6,33 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
+#include <stdio.h>
 
-#include "Event.h"
 #include "SampleEvent.h"
-
-using namespace std;
+#include "EventQueue.h"
 
 int main() {
-	Event* a0 = new SampleEvent(SAMPLE_EVENT,1);
-	SampleEvent a1 = SampleEvent(SAMPLE_EVENT);
-	SampleEvent a2 = SampleEvent(SAMPLE_EVENT,6);
-	cout << "!!!Hello World!!!" << endl;
-	cout << a0->getSubGraphID() << " : " << a0->getKey() << endl;
-	cout << a1.getSubGraphID() << " : " << a1.getKey() << endl;
-	cout << a2.getSubGraphID() << " : " << a2.getKey() << endl;
+	Event* a0 = new SampleEvent(SAMPLE_EVENT_KEY,1);
+	Event* a1 = new SampleEvent(SAMPLE_EVENT_KEY,6);
+	Event* a2 = new SampleEvent(SAMPLE_EVENT_KEY);
 
-	delete a0;
+	EventQueue* q = new EventQueue();
+
+	printf("Event Information\n");
+	printf("Event  key : %c subStateID : %d\n", a0->getKey(), a0->getSubGraphID());
+	printf("Event  key : %c subStateID : %d\n", a1->getKey(), a1->getSubGraphID());
+	printf("Event  key : %c subStateID : %d\n", a2->getKey(), a2->getSubGraphID());
+
+	q->push(a0);
+	q->push(a1);
+	q->push(a2);
+	printf("Size of queue : %d\n", q->size());
+	printf("Hello 1\n");
+	delete q;
+
+	//delete a0;
+	//delete a1;
+	//delete a2;
+	printf("Hello 2\n");
 	return 0;
 }
