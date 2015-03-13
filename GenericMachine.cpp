@@ -8,13 +8,13 @@
 
 #include <stdio.h>
 
-#include "SampleEvent.h"
+#include "Event.h"
 #include "EventQueue.h"
 
 int main() {
-	Event* a0 = new SampleEvent(SAMPLE_EVENT_KEY,1);
-	Event* a1 = new SampleEvent(SAMPLE_EVENT_KEY,6);
-	Event* a2 = new SampleEvent(SAMPLE_EVENT_KEY);
+	Event* a0 = new Event(SAMPLE_EVENT_KEY,1);
+	Event* a1 = new Event(SAMPLE_EVENT_KEY,6);
+	Event* a2 = new Event(SAMPLE_EVENT_KEY);
 
 	EventQueue* q = new EventQueue();
 

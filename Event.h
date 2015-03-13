@@ -5,13 +5,13 @@
  *      Author: ajl2612
  */
 
-#include "EventDefinitions.h"
-
 #ifndef GM_EVENT_H_
 #define GM_EVENT_H_
 
+#include "EventDefinitions.h"
+
 class Event {
-protected:
+private:
 	int subGraphID;
 	char eventKey;
 
@@ -21,8 +21,7 @@ public:
 	virtual ~Event();
 
 	int getSubGraphID();
-
-	virtual char getKey() = 0;
+	char getKey();
 };
 
 #endif /* GM_EVENT_H_ */

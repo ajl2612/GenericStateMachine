@@ -25,3 +25,7 @@ Event::~Event() {
 int Event::getSubGraphID(){
 	return this->subGraphID;
 }
+
+char Event::getKey(){
+	return eventKey;
+}
